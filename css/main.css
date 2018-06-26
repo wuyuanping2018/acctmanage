@@ -1,0 +1,510 @@
+/*主页头部*/
+div,p,h1,h2,h3,h4,h5,h6,ul,ol,dl,li{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+body {
+    font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif;
+}
+
+.container{
+    text-align: center;
+    width:100%;
+}
+#header-bar{
+    height:55px;
+    border-bottom: 1px solid #ccc;
+    background-image: linear-gradient(to bottom,#fcfcfc,#e2e2e2);
+    line-height: 53px;
+    text-align: center;
+}
+.fl{
+    float:left;
+}
+.fr{
+    float:right;
+}
+.clear{
+    clear:both;
+}
+#logo {
+    height:100%;
+    border-right:1px solid #999;
+}
+
+#logo > a {
+    height: 100%;
+    width: 100%;
+    background: url('../img/logo-new.png') no-repeat center 40%;
+    /*-webkit-background-size: contain;*/
+    /*background-size: contain;*/
+}
+
+#header {
+    position: relative;
+    height: 100%;
+    line-height: 54px;
+    /*font-family: 'NSimSun', Helvetica, Tahoma, Arial, sans-serif;*/
+    /*background: url('../img/title.png') no-repeat 50%;*/
+    font-size: 25px;
+    font-weight: bold;
+    color: #777;
+}
+#menu-button {
+    width: 40px;
+    height: 40px;
+    margin-top: 6px;
+    cursor: pointer;
+    background: url('../img/images/menu.png');
+}
+
+#header > a {
+    width:25px;
+    height:25px;
+    margin: 0 10px;
+    font-size: 20px;
+    color:#666;
+    text-align: center;
+    line-height:53px;
+    text-decoration: none;
+    cursor:pointer;
+}
+#header> a:hover{
+    color:darkblue;
+}
+
+#header > a:first-child {
+    padding-right: 5px;
+
+}
+
+#header > a:last-child {
+    margin-top: 1px;
+}
+
+.icon-number {
+    position: absolute;
+    top: 18%;
+    right: 66px;
+    width: 16px;
+    height: 12px;
+    border-radius: 6px;
+    line-height: 12px;
+    background: darkorange;
+    font-size: 6px;
+    color: #fff;
+
+}
+
+.notice {
+    position: absolute;
+    top: 20px;
+    right: 8%;
+    height: 0;
+    width: 200px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px 2px #ccc;
+    background: #fff;
+    font-size: 16px;
+    line-height: 40px;
+    opacity: 0;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+
+/* 主体页面 */
+/* 侧边栏 */
+#aside {
+    position: relative;
+    background: rgba(51,54,63,1);
+    height: 1320px;
+}
+
+/*.hover-model {*/
+    /*position: absolute;*/
+    /*top: 152px;*/
+    /*left: 0;*/
+    /*width: 100%;*/
+    /*height: 42px;*/
+    /*background: rgba(31,34,43,0);*/
+    /*z-index: 0;*/
+    /*transition: top .3s linear;*/
+/*}*/
+
+#aside img {
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    width: 50%;
+}
+
+#line {
+    border-top: 1px solid #666;
+}
+
+/*#menu {*/
+    /*margin: 0 -15px;*/
+    /*padding: 0 15px;*/
+/*}*/
+
+#menu li {
+    margin: 0 -15px 2px;
+    padding: 0 15px;
+    font-size: 1em;
+    text-align: left;
+    color: #ddd;
+}
+
+#menu a {
+    position: relative;
+    margin: 0 -15px;
+    padding: 0 15px;
+    line-height: 40px;
+    display: block;
+    color: #aaa;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    z-index: 100;
+}
+
+/*#menu a > span {*/
+    /*display: inline-block;*/
+    /*padding: 1% 3% 0 0;*/
+    /*font-size: 0.5em;*/
+    /*line-height: 30px;*/
+/*}*/
+
+#menu a > span:first-child {
+    float: left;
+    margin: 5px 15px 0 0;
+    height: 28px;
+    width: 28px;
+}
+
+.game1 {
+    background: url('../img/images/game1.png');
+}
+
+.game2 {
+    background: url('../img/images/game2.png');
+}
+
+.game3 {
+    background: url('../img/images/game3.png');
+}
+
+.game4 {
+    background: url('../img/images/game4.png');
+}
+
+.game5 {
+    background: url('../img/images/game5.png');
+}
+
+.game6 {
+    background: url('../img/images/game6.png');
+}
+
+.game7 {
+    background: url('../img/images/game7.png');
+}
+
+#menu a > span:last-child {
+    width: 12px;
+    height:12px;
+    margin-top: 14px;
+}
+
+.right-arrow {
+    background: url('../img/images/right.png');
+}
+
+.down {
+    background: url('../img/images/down.png');
+}
+
+/*#menu a > span.hide {*/
+    /*opacity: 0;*/
+/*}*/
+
+#menu li:hover,
+#menu li:hover a {
+    color: #41c4b9;
+    text-decoration: none;
+}
+
+#menu li:hover a {
+    background: rgba(31,34,43,1);
+}
+
+#menu > li ul {
+    height: 0;
+    overflow: hidden;
+}
+
+#menu > li ul.show li{
+    opacity: 1;
+}
+
+#menu > li li {
+    line-height: 30px;
+    padding-left: 29%;
+    height: 40px;
+    opacity: 0;
+    -webkit-transition: all .25s linear;
+    -moz-transition: all .25s linear;
+    -ms-transition: all .25s linear;
+    -o-transition: all .25s linear;
+    transition: all .25s linear;
+}
+
+#menu > li ul.show li {
+    height: 40px;
+    opacity: 1;
+}
+
+
+
+/* 主体展示页面 */
+#detail {
+    padding: 30px;
+    height: 1320px;
+    background: #f1f1f1;
+}
+
+.model {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0);
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear;
+}
+
+#floor1:after,
+#floor2:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+#floor1>div{
+    float:left;
+    position: relative;
+}
+
+#floor1 > div,
+#floor2 > div,
+#floor3 > div,
+#floor4 > div {
+    box-shadow: 0 0 1px 1px  #ddd;
+}
+
+#floor1 > div > div:first-child {
+    width: 100%;
+    height:100%;
+}
+
+#floor1 > div > div:last-child {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    color: #999;
+    font-size: 12px;
+}
+
+#floor1 > div > div:last-child > p {
+    margin-top: 3px;
+}
+
+#floor1 > div > div:last-child > h5 {
+    color: #666;
+    font-weight: bold;
+}
+
+#floor1 > div > span {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+}
+
+#meter > span {
+    background: url('../img/images/meter.png');
+}
+
+#ring > span {
+    background: url('../img/images/ring.png');
+}
+
+#rect > span {
+    background: url('../img/images/rect.png');
+}
+
+#floor1 > div:not(:last-child){
+    width: 28%;
+    height: 150px;
+    margin-right: 2%;
+    background: #fff;
+}
+
+#tree {
+    width: 10%;
+    height: 150px;
+    background: #fff;
+    text-align: center;
+    color: #999;
+    font-weight: bold;
+    line-height: 55px;
+}
+
+#tree  >img {
+    display: block;
+    margin: 0 auto;
+}
+
+#show-tree {
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    background: url('../img/tree.jpg') no-repeat;
+    background-size: 100% 100%;
+}
+
+#show-tree > span {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 20px;
+    line-height: 20px;
+    background: #fff;
+    color: #666;
+    cursor: pointer;
+}
+
+#floor2 > div {
+    position: relative;
+    margin-top: 2%;
+    height: 350px;
+    background: #fff;
+    float: left;
+}
+
+#map {
+    width: 58%;
+    margin-right: 2%;
+}
+
+/* 包含下拉列表的头部DIV */
+#map > div:first-child,
+#rose > div:first-child,
+#bar > div:first-child,
+#active-line > div:first-child {
+    height: 42px;
+    line-height: 45px;
+    border-bottom: 1px solid #ddd;
+    background: #fbfbfc;
+}
+
+#map p,
+#rose p,
+#bar p,
+#active-line p {
+    margin: 0 10px;
+    line-height: 45px;
+}
+
+#floor2 select,
+#floor3 select,
+#floor4 select {
+    padding-top: 4px;
+    border: none;
+    background: #fbfbfc;
+    box-shadow: none;
+}
+
+#floor2 select {
+    padding-top: 2px;
+}
+
+select option:hover {
+    background: #ddd;
+}
+
+#floor2 div.form-group[class*='fr'],
+#floor3 div.form-group[class*='fr'],
+#floor4 div.form-group[class*='fr'] {
+   margin-right: 10px;
+}
+
+
+div.btn-group {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    z-index: auto;
+}
+
+.btn-group > .btn,
+.btn-group > .btn.active {
+    outline-color: transparent;
+}
+
+.addMore {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: auto;
+}
+
+.addMore > .btn,
+.addMore > .btn.active {
+    width: 77px;
+    font-weight: bold;
+    outline-color: transparent;
+}
+
+#show-map,
+#show-rose,
+#show-bar,
+#show-active-line {
+    height: 300px;
+}
+
+#rose {
+    width: 40%;
+}
+
+#bar,
+#active-line {
+    width: 100%;
+    height: 350px;
+    margin-top: 2%;
+    background: #fff;
+}
+
+#floor4 > div {
+    position: relative;
+}

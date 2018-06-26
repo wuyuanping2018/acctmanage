@@ -1,0 +1,64 @@
+<!--修改密码-->
+
+<div id="content" class="optimized-detail">
+
+    <div class="head">
+        <div class="head-title fl">
+            修改密码
+        </div>
+        <ul class="head-option fr">
+
+
+        </ul>
+    </div>
+    <div class="show-data">
+
+        <div class="data-list">
+            <div class="title">
+                优化详情数据
+            </div>
+
+            <div class="list-detail">
+                <!--<div class="show-loading-model"></div>-->
+                <!--<div class="show-loading">-->
+                <!--正在加载数据...-->
+                <!--</div>-->
+
+                <form id="change-pwd" style="text-align: left">
+                    <div class="form-group">
+                        <label for="old-pwd">旧密码</label>
+                        <input type="password" class="form-control" id="old-pwd" placeholder="旧密码">
+                    </div>
+                    <div class="form-group">
+                        <label for="new-pwd">设置新密码</label>
+                        <input type="password" class="form-control" id="new-pwd" placeholder="新密码">
+                    </div>
+                    <div class="form-group" style="margin-bottom: 20px">
+                        <label for="con-new-pwd">确认新密码</label>
+                        <input type="password" class="form-control" id="con-new-pwd" placeholder="确认密码">
+                    </div>
+
+                    <button type="button" id="config-pwd" class="btn btn-primary">确认</button>
+                    <button type="button" id="cancel" href="user-manage.html" class="btn btn-danger">取消</button>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+    <script src="js/optimized-fun.js"></script>
+    <script src="js/optimized-detail.js"></script>
+    <script>
+        $(function(){
+            sessionStorage.show = 'g63';
+            menuOpen('g63');
+            $('.show-data').css('height','1090px');
+            $('.data-list>.title').html('修改密码');
+            $('#change-pwd').css('display','block');
+            $('.data-list').css('padding-bottom','10px');
+        });
+
+    </script>
+</div>
+
+

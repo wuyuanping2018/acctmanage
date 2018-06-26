@@ -1,0 +1,174 @@
+<!--宽带账号管理-->
+
+<div id="content" class="optimized-detail">
+    <div class="model"></div>
+    <div class="show-area-optimized">
+        <span class="close-model">&times;</span>
+        <div class="data-model">
+            <div class="data-pic">
+                <div class="title">图表显示</div>
+                <div class="model-pic">
+                    <div id="pic1" class="fl"></div>
+                    <div id="pic2" class="fr"></div>
+                </div>
+            </div>
+            <div class="data-list">
+                <div class="title">优化对比数据</div>
+                <div class="list-detail">
+                    <div class="show-loading-model"></div>
+                    <div class="show-loading">
+                        正在加载数据...
+
+                    </div>
+                    <table class="table table-mystriped table-bordered table-hover">
+                        <thead id="model-thead">
+                        <tr>
+                            <th>序号</th>
+                            <th>游戏名称</th>
+                            <th>加速前时延</th>
+                            <th>加速后时延</th>
+                            <th>日期</th>
+                            <th>详情</th>
+                        </tr>
+                        </thead>
+                        <tbody id="model-tb">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="head">
+        <div class="head-title fl">
+            宽带账号管理
+        </div>
+
+    </div>
+    <div class="show-data">
+        <div class="data-select">
+            <table id="check-table" cellspacing="5">
+
+                <tr id="check-out">
+                    <td class="for-relative">
+                        <span>宽带账号:</span>
+                        <div  class="form-group for-absolute">
+                            <input type="text" class="form-control" id="for-search-game">
+                        </div>
+                        <select name="game-name" id="load-game-name" class="load-game-name">
+                            <option value="英雄联盟">英雄联盟</option>
+                            <option value="地下城勇士" selected>地下城勇士</option>
+                        </select>
+                    </td>
+                    <td>
+                        <span>日期:</span>
+                        <input id="game-detail-date" type="date" name="date"/>
+                    </td>
+
+                    <td id="corporation">
+                        <span>运营商:</span>
+                        <select id="game-detail-corporation" name="corporation" class="fr">
+                            <option value="lt">联通</option>
+                            <option value="dx" selected>电信</option>
+                        </select>
+                    </td>
+                    <td style="column-span:2">
+                        <button id="g20-config" type="button" class="btn btn-primary">确认</button>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+
+
+
+        <div class="data-list">
+            <div class="title">
+                宽带信息列表
+            </div>
+
+            <div class="btn-icon">
+                <div class="fr">
+                    <button id="refresh" class="btn btn-xs btn-success fl">刷新</button>
+                    <button id="add" class="btn btn-xs btn-info fl">添加</button>
+                    <button id="delete" class="btn btn-xs btn-warning fl">批量删除</button>
+                    <button id="g20-print" class="btn btn-xs btn-info fl">导出数据</button>
+                </div>
+
+            </div>
+
+            <div class="list-detail">
+                <div class="show-loading-model"></div>
+                <div class="show-loading">
+                    正在加载数据...
+                </div>
+
+
+                <table id="show-list" class="table table-mystriped table-bordered table-hover">
+                    <thead id="table-thead">
+                    <tr id="thead">
+                        <th>宽带账号</th>
+                        <th>密码</th>
+                        <th>电话号码</th>
+                        <th>当前模式</th>
+                        <th>开通时间</th>
+                        <th>到期时间</th>
+                        <th>是否绑定微信账号</th>
+                        <!--<th>最后登录时间</th>-->
+                    </tr>
+                    </thead>
+                    <tbody id="tb">
+                    </tbody>
+                </table>
+            </div>
+            <div class="page">
+                <nav class="fr">
+                    <div class="fl show-num"  id="page-num"></div>
+                    <ul class="pagination">
+                        <li >
+                            <a href="#prev" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="insert">
+                            <a href="#next" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!--<div id="choose-pager" class="fr"></div>-->
+            </div>
+
+        </div>
+
+    </div>
+    <script src="js/optimized-fun.js"></script>
+    <script src="js/optimized-detail.js"></script>
+    <script>
+        $(function(){
+            sessionStorage.show = 'acct-manage';
+
+//            $('.show-data .data-pic').html('').css('padding',0);
+            var req = {
+                'cid': '2021',
+                'content': {
+                    'broadbandacc': '',     // transDate().end:今天的日期
+                    'nowpage': '',
+                    'pagesize': ''
+                }
+            };
+            noPicAjax(req,function(data){
+                showAcct(data);
+//                var content = JSON.parse(data.content);
+//                var selHtml = '';
+//                $.each(content, function (i, p) {
+//                    selHtml += '<option value="' + p.GameName + '">' + p.GameName + '</option>';
+//                });
+//                $('#load-game-name').html(selHtml).prepend('<option value="--请选择--" selected>--请选择--</option>');
+//                $('#for-search-game').val( $('#load-game-name').val());
+            });
+        });
+    </script>
+</div>
+
+

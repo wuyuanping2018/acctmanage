@@ -1,0 +1,166 @@
+<!--小程序用户管理-->
+
+<div id="content" class="optimized-detail">
+    <div class="model"></div>
+    <div class="show-area-optimized">
+        <span class="close-model">&times;</span>
+        <div class="data-model">
+            <div class="data-list">
+                <div class="title">绑定宽带列表</div>
+                <div class="list-detail">
+                    <div class="show-loading-model"></div>
+                    <div class="show-loading">
+                        正在加载数据...
+
+                    </div>
+                    <table class="table table-mystriped table-bordered table-hover">
+                        <thead id="model-thead">
+                        <tr>
+                            <th>宽带名</th>
+                            <th>电话</th>
+                            <th>地址</th>
+                            <th>模式</th>
+                            <th>备注</th>
+                            <th>开通状态</th>
+                            <th>用户昵称</th>
+                        </tr>
+                        </thead>
+                        <tbody id="model-tb">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="head">
+        <div class="head-title fl">
+            小程序用户管理
+        </div>
+
+    </div>
+    <div class="show-data">
+        <div class="data-select">
+            <table id="check-table" cellspacing="5">
+
+                <tr id="check-out">
+                    <td class="for-relative">
+                        <span>用户名称:</span>
+                        <div  class="form-group for-absolute">
+                            <input type="text" class="form-control" id="for-search-game">
+                        </div>
+                        <select name="game-name" id="load-game-name" class="load-game-name">
+                            <option value="昵称">用户昵称</option>
+
+                        </select>
+                    </td>
+                    <td>
+                        <span>日期:</span>
+                        <input id="user-start-date" type="date" name="date"/>
+                    </td>
+
+                    <td>
+                        <span>日期:</span>
+                        <input id="user-end-date" type="date" name="date"/>
+                    </td>
+                    <td style="column-span:2">
+                        <button id="user-manage-config" type="button" class="btn btn-primary">确认</button>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div  class="data-pic">
+            <div class="title"></div>
+            <div id="show-pic"></div>
+        </div>
+
+        <div class="data-list">
+            <div class="title">
+                用户信息
+            </div>
+
+            <div class="btn-icon">
+                <div class="fr">
+                    <button id="refresh" class="btn btn-xs btn-success fl">刷新</button>
+                    <button id="add" class="btn btn-xs btn-info fl">添加</button>
+                    <button id="delete" class="btn btn-xs btn-warning fl">批量删除</button>
+                    <button id="g20-print" class="btn btn-xs btn-info fl">导出数据</button>
+                </div>
+
+            </div>
+
+            <div class="list-detail">
+                <div class="show-loading-model"></div>
+                <div class="show-loading">
+                    正在加载数据...
+                </div>
+
+
+                <table id="show-list" class="table table-mystriped table-bordered table-hover">
+                    <thead id="table-thead">
+                    <tr id="thead">
+                        <th>微信OPENID</th>
+                        <th>昵称</th>
+                        <th>添加时间</th>
+                        <th>宽带详情</th>
+                    </tr>
+                    </thead>
+                    <tbody id="tb">
+                    </tbody>
+                </table>
+            </div>
+            <div class="page">
+                <nav class="fr">
+                    <div class="fl show-num"  id="page-num"></div>
+                    <ul class="pagination">
+                        <li >
+                            <a href="#prev" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="insert">
+                            <a href="#next" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!--<div id="choose-pager" class="fr"></div>-->
+            </div>
+
+        </div>
+
+    </div>
+    <script src="js/optimized-fun.js"></script>
+    <script src="js/optimized-detail.js"></script>
+    <script>
+        $(function(){
+            sessionStorage.show = 'user-manage';
+
+            $('.show-data .data-pic').html('').css('padding',0);
+            var req = {
+                'cid': '2011',
+                'content': {
+                    'accountname': '',
+                    'begindate': '',
+                    'enddate': '',
+                    'nowpage': '1',
+                    'pagesize': '10'
+                }
+            };
+            noPicAjax(req,function(data){
+                showUser(data);
+                var content = data.content;
+                var selHtml = '';
+                $.each(content, function (i, p) {
+                    selHtml += '<option value="' + p.nickname + '">' + p.nickname + '</option>';
+                });
+                $('#load-game-name').html(selHtml).prepend('<option value="--请选择--" selected>--请选择--</option>');
+                $('#for-search-game').val( $('#load-game-name').val());
+            });
+        });
+    </script>
+</div>
+
+

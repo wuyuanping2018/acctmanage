@@ -1,0 +1,133 @@
+/**
+  * @name: system.css
+  * @description: 系统选择页面样式
+  * @author: wuyuanping
+  * @update: 2017-09-04
+*/
+
+/*.bg-model {*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*right: 0;*/
+    /*bottom: 0;*/
+    /*opacity: 0;*/
+/*}*/
+
+#button-container {
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    /*height: 480px;*/
+    /*margin-left: 25%;*/
+    padding: 20px 0;
+    z-index: -1;
+    opacity: 0;
+    transition: all .3s linear;
+    /*background: rgba(0,0,0,.5);*/
+}
+
+#button-container > div {
+    position: relative;
+    height: 400px;
+    width: 30%;
+    float: left;
+    margin: 0 1% 0 2%;
+    cursor: pointer;
+    transition: all .3s linear;
+}
+
+.circle-btn {
+    /*position: absolute;*/
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    /*background: blue;*/
+    border-radius: 50%;
+    /*z-index: 100;*/
+    transition: all .3s linear;
+}
+
+.system1 {
+    background: url('../img/system1.png') center no-repeat;
+
+}
+
+.one-btn:hover .system1 {
+    background: url('../img/system1-a.png') center no-repeat;
+
+}
+
+.system2 {
+    background: url('../img/system2.png') center no-repeat;
+}
+
+.one-btn:hover .system2 {
+    background: url('../img/system2-a.png') center no-repeat;
+}
+
+.system3 {
+    background: url('../img/system3.png') center no-repeat;
+}
+
+.one-btn:hover .system3 {
+    background: url('../img/system3-a.png') center no-repeat;
+}
+
+
+.rect-btn {
+    /*position: absolute;*/
+    /*top: 10px;*/
+    /*left: 32px;*/
+    width: 100%;
+    /*height: 50px;*/
+    margin-top: 0;
+    /*line-height: 25px;*/
+    text-align: center;
+    overflow: hidden;
+    color: #1bf1fb;
+    font-size: 1.5em;
+    font-weight: bold;
+    /*background: #02689b;*/
+    /*opacity: 0;*/
+    cursor: pointer;
+
+    z-index: 10;
+}
+
+.rect-btn > .s-title {
+    opacity: 1;
+    transition: all .4s ease-in;
+}
+
+
+
+.rect-btn span {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.sub-title {
+    width: 80%;
+    margin-left: 10%;
+    /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-size: 0.6em;
+    font-weight: normal;
+    color: #f9f9f9;
+    text-align: left;
+    opacity: 0;
+    cursor: pointer;
+    transition: all .4s ease-in;
+}
+
+.one-btn:hover .sub-title {
+    opacity: 1;
+    transform: translateY(-20px);
+}
+
+.one-btn:hover .s-title {
+    opacity: 0;
+    top: -25px;
+    transform: translateY(-20px);
+}

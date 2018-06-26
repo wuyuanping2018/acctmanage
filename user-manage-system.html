@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <title >网络管家小程序用户管理系统</title>
+    <link rel="shortcut icon" href="img/title.ico"/>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/newmain.css"/>
+    <link rel="stylesheet" href="css/system.css"/>
+    <link rel="stylesheet" href="css/show-detail.css"/>
+    <link rel="stylesheet" href="css/optimized.css"/>
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body id="all-container">
+<div class='container'>
+
+    <div  class="row">
+        <div id="aside" class="col-sm-2 hidden-xs">
+
+            <!-- 鼠标移入悬浮遮罩层-->
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <img src="img/new-logo.png" class="img-responsive"/>
+                    <!--<img src="img/logo-1.png" class="img-responsive"/>-->
+                    <!--<div>Admin</div>-->
+                </div>
+                <div class="black-line"></div>
+                <div class="white-line"></div>
+
+            </div>
+
+            <ul id="menu">
+                <li class="no-sub">
+                    <a id="user-manage" href="user-manage.html">
+                        <span class="game1"></span>
+                        小程序用户管理
+                        <span class="fr"></span>
+                    </a>
+
+                </li>
+                <li class="no-sub">
+                    <a id="acct-manage" href="acct-manage.html">
+                        <span class="game0"></span>
+                        宽带账号管理
+                        <span class="fr"></span>
+                    </a>
+
+                </li>
+                <li class="no-sub">
+                    <a id="run-log" href="run-log.html">
+                        <span class="game5"></span>
+                        日志信息
+                        <span class="fr"></span>
+                    </a>
+                </li>
+                <li>
+                    <a id="show-g6" href="#">
+                        <span class="game7"></span>
+                        系统管理
+                        <span class="right-arrow fr"></span>
+                    </a>
+                    <ul id="g6" class="">
+                        <li><a id="g62" href="system-manage.html">用户管理</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <div class="black-line" style="margin-top: 10px;"></div>
+                    <div class="white-line"></div>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="col-sm-10 col-xs-12" id="main" >
+            <!--头部header -->
+            <div class="row">
+                <div id="header" class="col-xs-12">
+                    网络管家小程序用户管理系统
+                    <span id="menu-button" href="user-manage.html" class="fl"></span>
+                    <div id="manager" class="fr">
+                        <!--<a id="user" class="fl">admin</a>-->
+                        <div class="user">
+                            <a id="admin" class="fl ">admin</a>
+                            <span id="caret" class="caret"></span>
+                        </div>
+
+                        <div id="user-message">
+                           <!--<div id="user-center">-->
+                               <!--<span class="glyphicon glyphicon-user"></span>admin-->
+                           <!--</div>-->
+                            <div id="to-change-pwd" href="change-pwd.html">
+                                <!--<span class="glyphicon glyphicon-wrench"></span>修改密码-->
+                                <span  class="user-icon1 fl"></span>修改密码
+                            </div>
+                            <div id="log-out">
+                                <span class="user-icon2 fl"></span>注销
+                            </div>
+                            <!--<div id="to-change-system">-->
+                                <!--<span class="user-icon3 fl"></span>切换系统-->
+                            <!--</div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 用于加载不同页面的容器-->
+            <div class="row" >
+                <div id="content" href="user-manage.html" class="col-xs-12">
+                    <!-- load different content-html-->
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/jqPaginator.js"></script>
+<script src="js/load.js"></script>
+<script src="js/main.js"></script>
+
+
+
+
+
+
+<script>
+   // bootlint.showLintReportForCurrentDocument([]);
+</script>
+
+</body>
+</html>

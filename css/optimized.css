@@ -1,0 +1,581 @@
+/**
+  * @name: optimized.css
+  * @description: 优化详情数据页面样式
+  * @author: wuyuanping
+  * @update: 2017-07-26
+*/
+a {
+    text-decoration: none;
+}
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration:none;
+}
+
+input[type="checkbox"] {
+    top: 2px;
+}
+
+input {
+    border: 1px solid #337ab7;
+}
+
+.list-detail {
+    position: relative;
+}
+
+.show-loading-model {
+    display: none;
+    position: absolute;
+    left:0;
+    right:0;
+    width: 100%;
+    height: 600px;
+    background: rgba(250,250,250,.9);
+}
+.show-loading {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 100%;
+    height:100px;
+    margin-left: -100px;
+    font-size: 20px;
+    text-align: center;
+    background: url('../img/images/loading2.gif') no-repeat center;
+}
+
+.optimized-detail,
+.data-model {
+    /*padding-bottom: 30px;*/
+    margin: 0 -15px;
+}
+
+/*.show-area-optimized {*/
+    /*overflow: auto;*/
+/*}*/
+
+.data-model {
+    padding: 30px;
+}
+
+.data-model > div {
+    box-shadow: 1px 1px 2px 0 #999;
+}
+
+/*.data-model > div > .title {*/
+    /*/!*background: #33363f;*!/*/
+    /*background: #fafafa;*/
+    /*color: #333;*/
+/*}*/
+
+.data-model > .data-pic {
+    background: #fff;
+}
+
+#pic1 {
+    width: 60%;
+    height: 100%;
+}
+
+#pic2 {
+    width: 40%;
+    height: 100%;
+}
+
+
+.data-model .data-list {
+    background:  #fff;
+}
+
+.data-model .list-detail {
+    overflow: auto;
+}
+
+.data-model th {
+    background: #2d5f84;
+    color:#fff;
+}
+
+.head {
+    padding: 10px 30px 0;
+    height: 44px;
+    border-bottom: 1px solid #ccc;
+
+}
+
+/*.head:after {*/
+    /*content: '';*/
+    /*display: block;*/
+    /*clear: both;*/
+/*}*/
+
+.head-title {
+    padding-bottom: 10px;
+    font-size: 20px;
+    text-align: left;
+    /*color: #666;*/
+    color: #2d5f84;
+    font-weight: bold;
+}
+
+.head > ul {
+    padding: 1px;
+}
+
+.head > ul > li {
+    float: left;
+    padding: 5px 10px;
+    /*margin-bottom: -5px;*/
+    border: 1px solid transparent;
+    font-size: 16px;
+}
+
+.head > ul > li.choosed {
+    border: 1px solid #ccc;
+    border-bottom: #f1f1f1;
+    background: #f1f1f1;
+}
+
+.head > ul > li > a {
+    color: #666;
+}
+
+.head > ul > li.choosed > a {
+    color: #337ab7;
+}
+
+/* 数据显示.show-data */
+.show-data {
+    padding: 30px;
+}
+
+.show-data > div {
+    background: #fff;
+}
+
+.show-data > div {
+    box-shadow: 1px 1px 2px 0 #aaa;
+}
+
+.data-select {
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.data-select table td,
+#complain-model table td,
+#add-edit table td,
+#device-edit table td {
+    padding: 2px 8px 2px 2px;
+    /*width: 200px;*/
+}
+
+.data-select select,
+.data-pic select {
+    width: 110px;
+    margin: 0 10px 0 8px;
+    border: 1px solid #337ab7;
+}
+
+.data-select td span {
+    display: inline-block;
+    margin-top: 2px;
+}
+
+input[type=date]::-webkit-inner-spin-button {
+    visibility: hidden;
+}
+
+.data-select input,
+.data-pic input {
+    border: 1px solid #337ab7;
+    height: 23px;
+    margin-right: 10px;
+}
+
+/* 查询区域加载游戏名称和搜索框 */
+.data-select .for-relative {
+    position: relative;
+}
+
+.data-select .for-absolute {
+    position: absolute;
+    left: 74px;
+    top: 3px;
+    width: 120px;
+}
+
+.data-select .for-absolute input {
+    padding: 0;
+    border-radius: 0;
+    border-right: none;
+}
+
+.data-select .for-absolute input:focus {
+    border:1px solid #337ab7;
+    border-right: none;
+    box-shadow: none;
+}
+
+.data-select .load-game-name {
+    width: 200px;
+}
+/* 添加投诉 */
+#complain-model,
+#complain-handle,
+#device-edit {
+    background: #fff;
+    display: none;
+}
+
+#complain-handle .title,
+#complain-model .title,
+#add-edit .title,
+#device-edit .title {
+    background: #2d5f84;
+    color: #fff;
+}
+
+#complain-model table,
+#add-edit table {
+    padding: 15px;
+}
+
+#complain-model table td {
+    position: relative;
+    height: 60px;
+    margin: 5px 0;
+    border: none;
+    vertical-align: middle;
+}
+
+.complain-detail {
+    padding: 10px 0;
+}
+
+#search {
+    position: absolute;
+    width: 80%;
+}
+
+#complain-model #search input {
+    border-right: transparent;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+#search input:focus {
+    box-shadow: none;
+}
+
+#complain-model tr > td:last-child {
+    padding-right: 20px;
+    text-align: left;
+    color: #999;
+    font-size: 12px;
+}
+
+#complain-model select,
+#complain-handle select,
+#device-edit select {
+    height: 38px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #337ab7;
+}
+
+#complain-handle select {
+    border: 1px solid #ddd;
+}
+
+#complain-model input,
+#complain-model textarea {
+    border: 1px solid #337ab7;
+}
+
+#add-edit .red-text,
+#complain-model .red-text,
+#complain-handle .red-text {
+    color: red;
+}
+
+/* 投诉信息处理模态框 */
+
+#complain-handle .wait-load {
+    text-align: left;
+}
+
+#complain-handle .handle-detail,
+#device-edit .handle-detail {
+    padding: 5px;
+    background: #fff;
+}
+
+#complain-model tr td:first-child {
+    font-weight: bold;
+    text-align: right;
+}
+
+#complain-model .form-group {
+    margin-bottom: 0;
+}
+/*.data-select > table {*/
+    /*border-spacing: 10px;*/
+/*}*/
+
+
+/*.data-select td {*/
+    /*padding: 8px 4px;*/
+    /*text-align: center;*/
+/*}*/
+
+/*.data-select tr > td:last-child {*/
+    /*width: 105px;*/
+/*}*/
+
+/*.data-select input {*/
+    /*border: 1px solid #41c4b9;*/
+    /*width: 100px;*/
+/*}*/
+
+/*.data-select select {*/
+    /*border: 1px solid #41c4b9;*/
+    /*width: 100px;*/
+/*}*/
+
+.data-select .btn,
+.data-pic .btn {
+    width: 80px;
+    height: 25px;
+    line-height: 12px;
+}
+
+
+/* 图形显示块 */
+.data-pic {
+    margin-bottom: 15px;
+}
+
+.data-pic  table td {
+    padding: 2px 8px 2px 2px;
+    /*width: 200px;*/
+}
+.title {
+    height: 42px;
+    padding: 0 15px;
+    line-height: 42px;
+    font-size: 16px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    background: #fbfbfc;
+    /*background: #5390bc;*/
+    color: #333;
+}
+
+#show-list th,
+#show-list td {
+    min-width: 100px;
+}
+
+#show-pic {
+    padding-top: 10px;
+    height: 450px;
+}
+
+/* 数据表格显示块 */
+
+.data-list {
+    padding-bottom: 5px;
+}
+
+.btn-icon {
+    height: 32px;
+    padding: 8px 5px 0;
+    display: none;
+}
+
+.btn-icon .btn {
+    margin: 0 5px;
+}
+
+.add-ip {
+    margin-left: 360px;
+    display: none;
+}
+
+.add-ip.show-block {
+    display: block;
+}
+
+.add-ip > span {
+    padding: 2px 5px;
+    border-radius: 5px;
+    display: none;
+    background: red;
+    color: #fff;
+}
+
+#new-ip {
+    width: 200px;
+}
+
+.list-detail {
+    padding: 5px 10px;
+    /*overflow: auto;*/
+}
+
+#change-pwd {
+    display: none;
+}
+
+.table {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.table-mystriped > tbody > tr:nth-of-type(even) {
+    background-color: #f9f9f9;
+
+}
+
+
+
+/*.table-mystriped > tbody > tr > td:nth-of-type(even) {*/
+    /*background-color: #fdfdf9;*/
+/*}*/
+
+/*.table-mystriped > tbody > tr:nth-of-type(odd) > td:nth-of-type(odd) {*/
+    /*background-color: #f9f9f9;*/
+/*}*/
+
+.table > thead {
+    background: #2d5f84;
+}
+
+.table > thead > tr > th {
+    background: #2d5f84;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.table > tbody > tr > td {
+    border-color: #ddd;
+    vertical-align: middle;
+}
+
+#ip-tb a,
+#tb a {
+    margin: 0 5px;
+}
+
+#tb .edit {
+    background: #f1f1f1;
+}
+
+
+
+/* 分页 */
+.page {
+    height: 40px;
+}
+
+.show-num {
+    height: 100%;
+    text-align: center;
+    line-height: 36px;
+    color: #337ab7;
+    font-size: 16px;
+
+}
+
+
+.pagination {
+    margin: 0 10px;
+}
+
+
+/*#choose-pager > select {*/
+    /*height: 34px;*/
+    /*border: 1px solid #ddd;*/
+/*}*/
+/* 自定义的下拉列表样式 */
+.m-select {
+    position: relative;
+    display: inline-block;
+    padding:1px;
+}
+
+.m-select > span {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    height: 24px;
+    padding:3px 5px;
+    border-left: 1px solid #aaa;
+    background: #f1f1f1;
+}
+
+.m-select > span:hover {
+    background: #ddd;
+}
+
+.option {
+    box-sizing: border-box;
+    display: none;
+    position: absolute;
+    top: 27px;
+    left:1px;
+    /*width: 157px;*/
+    border: 1px solid #aaa;
+    border-top: none;
+    text-align: left;
+}
+
+.show-option {
+    display: block;
+    z-index: 100;
+    background: #fff;
+}
+
+.option > li:hover {
+    background: #ddd;
+}
+
+/* ip-show-detail */
+#ip-show-detail,
+#add-edit {
+    padding: 0;
+    box-shadow: none;
+}
+
+/* gameMessage-addEdit.html的css */
+
+#add-edit table td {
+    height: 50px;
+    border: none;
+    vertical-align: middle;
+}
+
+#add-edit tr > td:first-child {
+    width: 150px;
+    text-align: right;
+    font-weight: bold;
+}
+
+#add-edit tr > td:last-child {
+    text-align: left;
+}
+
+#add-edit .message {
+    padding: 10px 5px 0;
+}
+
+.no-result {
+    text-align: center;
+
+}

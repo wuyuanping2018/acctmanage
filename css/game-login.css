@@ -1,0 +1,173 @@
+/**
+  * @name:game.login.css
+  * @description: 游戏加速登录页面样式
+  * @author: wuyuanping
+  * @update: 2017-07-25
+*/
+
+html {
+    height: 100%;
+}
+
+body,
+div,
+p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #1e9ae2;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    /* background: linear-gradient(to left, rbga(11, 111, 202, 1) 0%, rbga(9, 152, 228, 1) 50%, rbga(11, 111, 202, 1) 100%); */
+    background-image: -webkit-linear-gradient( to left, rgba(11, 111, 202, 1) 0%, rgba(9, 152, 228, 1) 60%, rgba(10, 133, 217, 1) 100%);
+    background-image: linear-gradient(to left, rgba(11, 111, 202, 1) 0%, rgba(9, 152, 228, 1) 60%, rgba(10, 133, 217, 1) 100%);
+    height: 100%;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.bg-model {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /*z-index: 1000;*/
+    /*background: rgba(0,0,0,1);*/
+    transition: all .3s linear;
+}
+/*.container:before {*/
+    /*content: '';*/
+    /*display: table;*/
+/*}*/
+
+/* .container:before {
+    content: '';
+    display: table;
+} */
+
+.header {
+    margin-top: 80px;
+    height: 20%;
+    background: url('../img/game-login.png') no-repeat center;
+    background-size: 60%;
+    min-height: 110px;
+    min-width: 1194px;
+    /* max-height: 110px; */
+}
+
+.login-body {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-around; */
+    height: 80%;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.login-body-left {
+    position: absolute;
+    background: url('../img/login-left.png') no-repeat center;
+    background-size: contain;
+    width: 55%;
+    height: 100%;
+    z-index: 99;
+    left: 0;
+    min-width: 666px;
+    min-height: 396px;
+}
+
+.login-body-right {
+    position: absolute;
+    background: url('../img/login-box.png') no-repeat center;
+    background-size: contain;
+    width: 70%;
+    height: 100%;
+    left: 90%;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 466px;
+    min-height: 396px;
+    /* max-width: 666px;
+    max-height: 396px; */
+}
+
+.form-horizontal {
+    width: 56%;
+    height: 35%;
+    padding-top: 10px;
+    vertical-align: middle;
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;*/
+    justify-content: center;
+    /*background-color: #fff;*/
+    max-height: 422px;
+
+}
+
+.login-body .form-horizontal .has-feedback .form-control-feedback{
+    color: #fff;
+}
+
+.form-control:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #000;
+    opacity:1;
+}
+
+.form-control::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #000;
+    opacity:1;
+}
+
+.form-control:-ms-input-placeholder{
+    color: #000;
+    opacity:1;
+}
+
+.form-control::-webkit-input-placeholder{
+    color: #fff;
+    opacity:.6;
+}
+
+.title {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+}
+
+.form-control {
+    background: rgba(100, 100, 100, .3);
+    color: #fff;
+}
+
+.form-margin-bottom {
+    margin-bottom: 5px;
+}
+
+#submit {
+    background-image: linear-gradient(to bottom, #aed54d, #80bb09);
+}
+
+.footer {
+    text-align: center;
+    font-size: 14px;
+    color: #eee;
+}

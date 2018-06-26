@@ -1,0 +1,263 @@
+<!--用户管理-->
+
+<div id="content" class="optimized-detail">
+    <div class="model"></div>
+    <div class="show-area-optimized">
+        <span class="close-model">&times;</span>
+        <div class="data-model">
+
+            <!-- 新增/编辑用户-->
+            <div id="complain-model">
+                <div class="title">新增用户</div>
+                <div class="complain-detail">
+                    <table class="table">
+                        <tr>
+                            <td>用户名：</td>
+                            <td >
+                                <div  class="form-group">
+                                    <input id="user" type="text" class="form-control" placeholder="请输入用户名">
+                                </div>
+
+                            </td>
+                            <td></td>
+                        </tr>
+
+                        <tr id="upwd-tr">
+                            <td>密码：</td>
+                            <td >
+                                <div  class="form-group">
+                                    <input id="upwd" type="text" class="form-control" placeholder="请输入密码">
+                                </div>
+
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr id="con-upwd-tr">
+                            <td>确认密码：</td>
+                            <td >
+                                <div  class="form-group">
+                                    <input id="config-upwd" type="text" class="form-control" placeholder="确认密码">
+                                </div>
+
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr id="role-tr">
+                            <td>所属角色：</td>
+                            <td>
+                                <select name="user-role" id="user-role">
+                                    <option value="1">系统管理员</option>
+                                    <!--<option value="2">省公司</option>-->
+                                    <!--<option value="3">地级市</option>-->
+                                    <!--<option value="6">普通用户</option>-->
+                                </select>
+                            </td>
+                            <td>
+                                <span>
+                                    请选择所属角色
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>所属机构：</td>
+                            <td>
+                                <select name="organization-dept" id="dept-name">
+                                    <!--<option value="4">开发部</option>-->
+                                    <!--<option value="5">客服部</option>-->
+                                    <!--<option value="6">测试部</option>-->
+                                </select>
+                            </td>
+                            <td>
+                                <span>
+                                    请选择所属机构相应部门
+                                </span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>联系电话：</td>
+                            <td>
+                                <div class="form-group">
+                                    <input id="user-tel" type="text" class="form-control" placeholder="请输入联系电话">
+                                </div>
+                            </td>
+                            <td>
+
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>联系邮箱：</td>
+                            <td>
+                                <div class="form-group">
+                                    <input id="user-email" type="text" class="form-control" placeholder="请输入邮箱">
+                                </div>
+                            </td>
+                            <td>
+                                <span>
+                                    请输入邮箱，例如：youremail@163.com
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>即时通信号码：</td>
+                            <td>
+                                <div class="form-group">
+                                    <input id="link-num" type="text" class="form-control" placeholder="请输入即时通信号码">
+                                </div>
+                            </td>
+                            <td>
+                                即时通信号码,例如：qq等
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>联系地址：</td>
+                            <td >
+                                <textarea id="user-addr" class="form-control" rows="5" placeholder="您的联系地址"></textarea>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td style="padding: 10px 0;">
+                                <button id="user-config" type="button" class="user-btn btn btn-primary" style="margin-right: 10px">提交</button>
+                                <button id="user-cancel" type="button" class="user-btn btn btn-warning">取消</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="head">
+        <div class="head-title fl">
+            用户管理
+        </div>
+        <ul class="head-option fr">
+
+
+        </ul>
+    </div>
+    <div class="show-data">
+        <div class="data-select">
+            <table id="check-table" cellspacing="5">
+
+                <tr id="check-out">
+                    <td>
+                        用户名:
+                        <input id="uName" type="text" name='uname'/>
+                    </td>
+                    <td>
+                        <span>角色:</span>
+                        <select class="fr" name="handle-state">
+                            <option value="none" selected>--请选择--</option>
+                            <option value="0" >系统管理员</option>
+                            <option value="1" >省公司</option>
+                            <option value="2" >地级市</option>
+                            <option value="3" >普通用户</option>
+                        </select>
+                    </td>
+                    <td>
+                        <button id="config" type="button" class="btn btn-primary">确认</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div  class="data-pic">
+            <div class="title"></div>
+            <div id="show-pic"></div>
+        </div>
+
+        <div class="data-list">
+            <div class="title">
+                优化详情数据
+            </div>
+
+            <div class="btn-icon">
+                <!--<div class="add-ip fl">-->
+                <!--<input id="new-ip" type="text" name="new-ip"/>-->
+                <!--<button id="add-ip" type="button" class="btn btn-xs btn-primary">添加IP</button>-->
+                <!--<button id="close-ip" type="button" class="btn btn-xs btn-danger">关闭</button>-->
+                <!--<span class="bg bg-danger">IP地址不能为空</span>-->
+
+                <!--</div>-->
+                <div class="fr">
+                    <button id="refresh" class="btn btn-xs btn-success fl">刷新</button>
+                    <button id="add-user" class="btn btn-xs btn-info fl">添加用户</button>
+                    <button id="delete" class="btn btn-xs btn-warning fl">批量删除</button>
+                </div>
+
+            </div>
+
+            <div class="list-detail">
+                <div class="show-loading-model"></div>
+                <div class="show-loading">
+                    正在加载数据...
+                </div>
+
+
+
+                <table id="show-list" class="table table-mystriped table-bordered table-hover">
+                    <thead id="table-thead">
+                    <tr id="thead">
+                        <th>序号</th>
+                        <th>游戏名称</th>
+                        <th>加速前时延</th>
+                        <th>加速后时延</th>
+                        <th>日期</th>
+                        <th>详情</th>
+                    </tr>
+                    </thead>
+                    <tbody id="tb">
+                    </tbody>
+                </table>
+            </div>
+            <div class="page">
+                <nav class="fr">
+                    <ul class="pagination">
+                        <li >
+                            <a href="#prev" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="insert">
+                            <a href="#next" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!--<div id="choose-pager" class="fr"></div>-->
+            </div>
+
+        </div>
+
+    </div>
+    <script src="js/optimized-fun.js"></script>
+    <script src="js/optimized-detail.js"></script>
+    <script>
+        $(function(){
+            sessionStorage.show = 'g62';
+            $('.show-data .data-pic').css('display','none');
+            $('.data-list>.title').html('用户管理列表');
+            $('.show-data').css('height','900px');
+            $('.page').html('');
+            //列表操作区域
+            $('.btn-icon').css('display','block');
+            noPicAjax(
+                    {
+                        'cid': '7004',
+                        'content': {
+                            'username': ''
+                        }
+                    },
+                    showg62
+            );
+        });
+
+    </script>
+</div>
+
+

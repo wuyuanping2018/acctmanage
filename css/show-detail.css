@@ -1,0 +1,384 @@
+/**
+  * @name: show-detail.css
+  * @description: 数据图形化页面样式
+  * @author: wuyuanping
+  * @update: 2017-07-26
+*/
+
+#show-detail {
+    padding: 30px 15px;
+}
+
+.model {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0);
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear;
+}
+
+.show-area-optimized {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left:0;
+    width: 90%;
+    padding: 0 15px 15px;
+    margin: 20px 0 0 50px;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    background: #f1f1f1;
+}
+
+.area-optimized-head {
+    height: 40px;
+    padding-top: 20px;
+    /*background: #fbfbfc;*/
+    font-size: 20px;
+    font-weight: bold;
+    color: #666;
+}
+
+#area-pic {
+    height: 300px;
+}
+
+.show-area-optimized .close-model {
+    background: #f1f1f1;
+}
+
+#floor1 > .floor1 {
+    width: 30%;
+    background: #f1f1f1;
+}
+
+
+#floor1:after,
+#floor2:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.floor1>div{
+    /*float:left;*/
+    position: relative;
+}
+
+.floor1 > div,
+#map,
+#floor2 > div,
+#floor3 > div,
+#floor30 > div,
+#floor4 > div {
+    /*box-shadow: 0 0 1px 1px  #ddd;*/
+    box-shadow: 1px 1px 2px 0  #aaa;
+}
+
+.floor1 > div > div:first-child {
+    width: 100%;
+    height:100%;
+}
+
+div.prompt{
+    position: absolute;
+    left: 0;
+    top: 150px;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    /*border-radius: 5px;*/
+    opacity: 0;
+    line-height: 80px;
+    font-size: 12px;
+    color: #fff;
+    background: rgba(41,44,53,.7);
+    transition: all .25s linear;
+}
+
+div.prompt.show {
+    top: 70px;
+    height: 80px;
+    opacity: 1;
+    z-index: 140;
+}
+
+.floor1 > div:not(:last-child){
+    width: 100%;
+    height: 150px;
+    background: #fff;
+}
+
+.floor1 > div:not(:first-child) {
+    margin-top: 20px;
+}
+
+.floor1 > div > div:last-child {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: #999;
+    font-size: 12px;
+}
+
+.floor1 > div > div:last-child > p {
+    margin-top: 3px;
+    color: #666;
+}
+
+.floor1 > div > div:last-child > h5 {
+    color: #666;
+    font-weight: bold;
+}
+
+.floor1 > div > span {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+}
+
+#meter > span {
+    background: url('../img/images/meter.png');
+}
+
+#ring > span {
+    background: url('../img/images/ring.png');
+}
+
+#rect > span {
+    background: url('../img/images/rect.png');
+}
+
+
+
+/*#tree {*/
+    /*width: 10%;*/
+    /*height: 150px;*/
+    /*background: #fff;*/
+    /*text-align: center;*/
+    /*color: #777;*/
+    /*font-weight: bold;*/
+    /*line-height: 55px;*/
+/*}*/
+
+/*#tree  >img {*/
+    /*display: block;*/
+    /*margin: 0 auto;*/
+/*}*/
+
+
+
+
+#show-tree {
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left:20px;
+    padding: 0;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    /*background: #fff;*/
+    /*background: url('../img/tree.jpg') no-repeat;*/
+    /*background-size: contain;*/
+}
+
+.close-model {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 20px;
+    line-height: 20px;
+    background: #fff;
+    color: #666;
+    cursor: pointer;
+}
+#floor1 > div {
+    position: relative;
+    height: 490px;
+    background: #fff;
+    float: left;
+}
+
+#floor2 > div {
+    position: relative;
+    margin-top: 2%;
+    height: 350px;
+    background: #fff;
+    float: left;
+}
+
+#map {
+    width: 68%;
+    margin-right: 2%;
+}
+
+/* 包含下拉列表的头部DIV */
+#map > div:first-child,
+#rose > div:first-child,
+#rose2 > div:first-child,
+#bar > div:first-child,
+#flow-bar > div:first-child,
+#active-line > div:first-child {
+    height: 42px;
+    line-height: 42px;
+    border-bottom: 1px solid #ddd;
+    background: #fbfbfc;
+    /*background-image: linear-gradient(to bottom, #fbfbfc,#f2f1f2);*/
+}
+
+/*#map p,*/
+/*#rose p,*/
+/*#bar p,*/
+/*#flow-bar p,*/
+/*#active-line p {*/
+    /*margin: 0 10px;*/
+    /*line-height: 42px;*/
+    /*font-size: 16px;*/
+    /*/!*font-family: "SimHei", Arial, Helvetica, sans-serif;*!/*/
+/*}*/
+
+/* 下拉列表效果 */
+.form-control {
+    height: 38px;
+    padding: 6px 0 6px 8px;
+}
+
+#floor1 select,
+#floor2 select,
+#floor3 select,
+#floor30 select,
+#floor4 select {
+    padding-top: 5px;
+    margin-left: 5px;
+    border: none;
+    background: #fbfbfc;
+    box-shadow: none;
+}
+
+/*#floor2 select {*/
+    /*padding-top: 2px;*/
+/*}*/
+
+select option:hover {
+    background: #ddd;
+}
+
+#floor1 div.form-group[class*='fr'],
+#floor2 div.form-group[class*='fr'],
+#floor3 div.form-group[class*='fr'],
+#floor30 div.form-group[class*='fr'],
+#floor4 div.form-group[class*='fr'] {
+    margin-right: 10px;
+}
+
+
+div.btn-group {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    z-index: auto;
+}
+
+.btn-group > .btn,
+.btn-group > .btn.active {
+    outline-color: transparent;
+}
+
+.add-data {
+    position: absolute;
+    left: 15px;
+    top: 55px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    background: url('../img/images/detail.png') no-repeat;
+}
+
+.addMore {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: auto;
+}
+
+.addMore > .btn,
+.addMore > .btn.active {
+    width: 77px;
+    font-weight: bold;
+    outline-color: transparent;
+}
+
+#show-map{
+    height: 440px;
+}
+
+
+#show-rose,
+#show-rose2,
+#show-bar,
+#show-flow,
+#show-active-line {
+    height: 300px;
+}
+
+
+#floor2 > div {
+    width: 49%;
+}
+
+#rose {
+    margin-right: 2%;
+}
+#rose,
+#rose2,
+#bar,
+#active-line,
+#flow-bar {
+    width: 100%;
+    height: 350px;
+    margin-top: 2%;
+    background: #fff;
+}
+
+#floor3 > div,
+#floor30 > div,
+#floor4 > div {
+    position: relative;
+}
+
+/* echarts数据视图 */
+.echarts-dataview > p {
+    /*height: 30px;*/
+    background: #f1f1f1;
+}
+
+#map .echarts-dataview > p {
+    line-height: 30px;
+}
+
+.data-view {
+    width: 600px;
+    padding: 10px;
+    overflow: hidden;
+
+}
+
+.data-view > li {
+    width: 80px;
+    padding: 5px;
+}
+
